@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { LoginAction } from "./redux/Action";
 import Loader from "./common/Loader";
 
-const Login = ({ passwordShowHide, setPasswordShowHide, history }) => {
+const Login = ({ passwordShowHide, setPasswordShowHide }) => {
   let navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -61,7 +61,7 @@ const Login = ({ passwordShowHide, setPasswordShowHide, history }) => {
         </div>
         <p
           className="mb-0 text-end pt-1 text_hover cursor-pointer"
-          onClick={() => history.push("/forgot/password")}
+          onClick={() => navigate("/forgot/password")}
         >
           Forgot Password
         </p>
