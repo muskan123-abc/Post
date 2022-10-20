@@ -7,6 +7,7 @@
 .post-show-box {
   max-height: 100vh;
   overflow: auto;
+  background-color: black !important;
 }
 
 .right-sidebar {
