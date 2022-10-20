@@ -4,8 +4,10 @@ import Logo from "../assets/images/gif/logo.gif";
 const Sidebar = () => {
   return (
     <>
-      <img src={Logo} alt="" />
       <div className="left-sidebar">
+        <div className="text-center">
+          <img className="z-index" src={Logo} alt="" />
+        </div>
         <h1>hello world</h1>
       </div>
     </>

@@ -43,3 +43,10 @@
 .icon-border:hover {
   background-color: #d1191f77 !important;
 }
+
+.z-index {
+  z-index: 1;
+  height: 130px;
+  filter: brightness(0);
+  filter: invert(100);
+}
