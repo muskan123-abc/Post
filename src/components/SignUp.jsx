@@ -188,7 +188,7 @@ const SignUp = ({
           Already have an account?
           <span
             className="d-inline-block ps-1 cursor-pointer text_hover"
-            onClick={() => history.push("/")}
+            onClick={() => navigate("/")}
           >
             Log In
           </span>

@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
-import { LoginApi, MeApi, SignUpApi } from "./Api";
+import { CreatePostApi, LoginApi, MeApi, SignUpApi } from "./Api";
 export const LOGIN_SUCCESSFULLY = "LOGIN_SUCCESSFULLY";
 export const SIGN_UP_SUCCESSFULLY = "SIGN_UP_SUCCESSFULLY";
+export const CREATE_POST = "CREATE POST";
 
 /**
  * Sign up action
@@ -64,7 +65,7 @@ export const LoginAction = (data, setLoading, navigate) => async (dispatch) => {
       dispatch(LoginSuccess);
       Swal.fire({
         icon: "success",
-        title: "Great Successfully Sign Up",
+        title: "Great Successfully Login In",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -84,9 +85,39 @@ export const LoginAction = (data, setLoading, navigate) => async (dispatch) => {
     });
   }
 };
+/**
+ * ME ACTION
+ * @param {Object}
+ * @returns
+ */
 export const MeDataAction = () => async () => {
   try {
     const response = await MeApi();
     console.log("asdad", response);
   } catch (error) {}
 };
+/**
+ * CREATE POST
+ * @param {Object}
+ * @returns
+ */
+export const PostCreate = (data) => ({
+  type: "CREATE POST",
+  data,
+});
+export const CreatePostAction =
+  (data, setLoading, navigate) => async (dispatch) => {
+    setLoading(true);
+    try {
+      const response = await CreatePostApi(data);
+      if (response) {
+        dispatch(PostCreate(response));
+        navigate("/postview");
+        setLoading(false);
+      } else {
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+    }
+  };

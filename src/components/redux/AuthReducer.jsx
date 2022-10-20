@@ -1,8 +1,13 @@
-import { LOGIN_SUCCESSFULLY, SIGN_UP_SUCCESSFULLY } from "./Action";
+import {
+  CREATE_POST,
+  LOGIN_SUCCESSFULLY,
+  SIGN_UP_SUCCESSFULLY,
+} from "./Action";
 
 const initialState = {
   SignUpData: {},
   loginData: {},
+  postcreate: {},
 };
 export default function AuthReducer(state = initialState, action) {
   switch (action.type) {
@@ -18,6 +23,12 @@ export default function AuthReducer(state = initialState, action) {
       return {
         ...state,
         loginData: action.data,
+      };
+    }
+    case CREATE_POST: {
+      return {
+        ...state,
+        postcreate: action.data.createPost,
       };
     }
 

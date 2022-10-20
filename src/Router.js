@@ -9,6 +9,8 @@ import Login from "./components/Login";
 import { MeDataAction } from "./components/redux/Action";
 import SignUp from "./components/SignUp";
 import Thanks from "./components/Thanks";
+import Home from "./components/Home";
+import PostView from "./components/PostView";
 
 const Router = () => {
   const [passwordShowHide, setPasswordShowHide] = useState(false);
@@ -59,7 +61,8 @@ const Router = () => {
           }
         />
         <Route path="/thanks:email" element={<Thanks />} />
-        {/* <Route path component={ErrorPage} /> */}
+        <Route path="/home" element={<Home />} />
+        <Route path="/postview" element={<PostView />} />
       </Routes>
     </>
   );
