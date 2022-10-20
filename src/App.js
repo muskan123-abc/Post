@@ -1,4 +1,3 @@
-import "./assets/style/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Router from "./Router";
 

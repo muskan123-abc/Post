@@ -7,6 +7,7 @@
 :root {
   /* COLORS */
   --black: #0c0404;
+  --red: #d1191f;
   --white: #ffffff;
   /* FONT SIZES  */
   --font_xl: 40px;
@@ -183,6 +184,22 @@ body {
 }
 .swal-title:first-child {
   margin-top: 50px !important;
+}
+.upload_file {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 200px;
+}
+.post_view_bg {
+  background-color: var(--black);
+  border: 2px solid var(--white);
+  border-radius: 12px;
+}
+.post_view_img {
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 35px;
 }
 /* MEDIA QUERIES  */
 @media (min-width: 991.98px) {
