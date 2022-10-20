@@ -1,6 +1,8 @@
 .left-sidebar {
   background-color: white;
-  width: 300px;
+  width: 250px;
+  position: fixed;
+  left: 0;
   min-height: 100vh;
 }
 
@@ -8,10 +10,14 @@
   max-height: 100vh;
   overflow: auto;
   background-color: black !important;
+  max-width: 500px;
+  margin: auto;
 }
 
 .right-sidebar {
   background-color: white;
-  width: 300px;
+  width: 250px;
+  position: fixed;
+  right: 0;
   min-height: 100vh;
 }

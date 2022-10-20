@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       <Dashboard />
-      {/* <div className="container h-100 justify-content-center d-flex flex-column w-100">
+      <div className="container h-100 justify-content-center d-flex flex-column w-100">
         <h1 className="sign_up_text raleway_font mb-sm-2 mb-0 text-center pt-3">
           Create Post
         </h1>
@@ -131,7 +131,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
