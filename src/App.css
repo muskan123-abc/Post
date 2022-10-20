@@ -201,6 +201,18 @@ body {
   border-radius: 50%;
   width: 35px;
 }
+
+/* RIGHT SIDE BAR  */
+.sidebar_icon,
+.sidebar_icon path {
+  fill: var(--red);
+}
+.logout_icon path {
+  stroke: var(--red);
+}
+.border_bottom {
+  border: 1px solid var(--red);
+}
 /* MEDIA QUERIES  */
 @media (min-width: 991.98px) {
   .height_100 {

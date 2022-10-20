@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogPost = () => {
   return (
-    <div>
+    <>
       {" "}
       <div className="post-show-box">
         <p className="text-white">
@@ -138,7 +138,7 @@ const BlogPost = () => {
           sequi hic, ratione labore.
         </p>
       </div>
-    </div>
+    </>
   );
 };
 
