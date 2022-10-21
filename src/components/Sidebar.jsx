@@ -8,7 +8,13 @@ const Sidebar = () => {
         <div className="text-center">
           <img className="z-index" src={Logo} alt="" />
         </div>
-        <h1>hello world</h1>
+        <ul className="list-unstyled mx-auto ms-5">
+          <li className="cursor-pointer">Friends</li>
+          <li className="py-3">My Wall</li>
+          <li>Public Tables</li>
+          <li className="py-3">Discover</li>
+          <li>Groups</li>
+        </ul>
       </div>
     </>
   );
