@@ -3,12 +3,11 @@ import Form from "react-bootstrap/Form";
 import { UploadIcon } from "./common/icon/icons";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import { CreatePostAction } from "./redux/Action";
 import Loader from "./common/Loader";
-import Dashboard from "./Dashboard";
+import Modal from "react-bootstrap/Modal";
 
-const Home = () => {
+const Home = ({ handleClose, show }) => {
   const [uploadImg, setUploadImg] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -38,15 +37,20 @@ const Home = () => {
   };
   return (
     <>
-      <Dashboard />
-      <div className="container h-100 justify-content-center d-flex flex-column w-100">
-        <h1 className="sign_up_text raleway_font mb-sm-2 mb-0 text-center pt-3">
-          Create Post
-        </h1>
-        <div className="row justify-content-center">
-          <div className="col-xl-6 col-lg-6 col-md-9 col-sm-10  my-lg-auto mt-3">
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            {" "}
+            <h1 className="sign_up_text text-dark  raleway_font  mb-0 text-center font_md ">
+              Create Post
+            </h1>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {" "}
+          <div className="container  justify-content-center d-flex flex-column w-100">
             <div className="mt-2">
-              <p className="mb-1  pt-1  cursor-pointer text-white raleway_font  fw-semibold">
+              <p className="mb-1  pt-1  cursor-pointer text-dark raleway_font  fw-semibold">
                 Title
               </p>
               <Form.Control
@@ -62,7 +66,7 @@ const Home = () => {
                 }
               />
             </div>
-            <p className="mb-1  pt-1 mt-2  cursor-pointer text-white raleway_font  fw-semibold">
+            <p className="mb-1  pt-1 mt-2  cursor-pointer text-dark raleway_font  fw-semibold">
               Description
             </p>
             <Form.Control
@@ -80,7 +84,7 @@ const Home = () => {
             />
 
             <div className="mt-2">
-              <p className="mb-1  pt-1  cursor-pointer text-white raleway_font  fw-semibold">
+              <p className="mb-1  pt-1  cursor-pointer text-dark raleway_font  fw-semibold">
                 Upload Media
               </p>
               <div className="row align-items-center d-flex ">
@@ -130,8 +134,8 @@ const Home = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };

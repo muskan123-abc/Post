@@ -12,11 +12,15 @@ import Thanks from "./components/Thanks";
 import Home from "./components/Home";
 import PostView from "./components/PostView";
 import Dashboard from "./components/Dashboard";
+import MyPost from "./components/MyPost";
 
 const Router = () => {
   const [passwordShowHide, setPasswordShowHide] = useState(false);
   const [confirmPasswordShowHide, setConfirmPasswordShowHide] = useState(false);
   const dispatch = useDispatch();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const headers = {
     accessToken: localStorage.getItem("signupvalue"),
@@ -37,7 +41,7 @@ const Router = () => {
               setPasswordShowHide={setPasswordShowHide}
             />
           }
-        />
+        />{" "}
         <Route
           path="/signup"
           element={
@@ -48,8 +52,8 @@ const Router = () => {
               setConfirmPasswordShowHide={setConfirmPasswordShowHide}
             />
           }
-        />
-        <Route path="/forgot/password" element={<ForgotPassword />} />
+        />{" "}
+        <Route path="/create/post" element={<Home />} />{" "}
         <Route
           path="/change/password"
           element={
@@ -60,11 +64,12 @@ const Router = () => {
               setConfirmPasswordShowHide={setConfirmPasswordShowHide}
             />
           }
-        />
-        <Route path="/thanks:email" element={<Thanks />} />
-        <Route path="/home" element={<Dashboard />} />
-        <Route path="/postview" element={<PostView />} />
-      </Routes>
+        />{" "}
+        <Route path="/thanks:email" element={<Thanks />} />{" "}
+        <Route path="/createpost" element={<Dashboard />} />{" "}
+        <Route path="/mypost" element={<MyPost />} />{" "}
+        <Route path="/postview" element={<PostView />} />{" "}
+      </Routes>{" "}
     </>
   );
 };

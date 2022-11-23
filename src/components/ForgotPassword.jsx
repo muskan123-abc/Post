@@ -4,7 +4,7 @@ import ForgotImg from "../assets/images/gif/forgot.gif";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
-const ForgotPassword = ({ history }) => {
+const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const emailRegx =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

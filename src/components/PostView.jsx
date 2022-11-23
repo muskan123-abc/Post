@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 const PostView = () => {
   const postView = useSelector((state) => state.AuthReducer.postcreate);
-  console.log("postView0", postView);
   return (
     <div className="container">
       <div className="d-flex justify-content-between align-items-center pt-3">

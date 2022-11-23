@@ -112,7 +112,7 @@ export const CreatePostAction =
       const response = await CreatePostApi(data);
       if (response) {
         dispatch(PostCreate(response));
-        navigate("/postview");
+        // navigate("/postview");
         setLoading(false);
       } else {
         setLoading(false);
